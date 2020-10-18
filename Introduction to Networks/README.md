@@ -1,8 +1,8 @@
 # Introduction To Network Analysis
 Istilah penting yang perlu dipahami adalah
-1. nodes
+1. nodes <br/>
 nodes adalah objek/individu yang digambarkan dalam bentuk "titik".
-2. edge
+2. edge <br/>
 edge adalah garis yang menghubungkan satu objek ke objek lainnya sehingga digambarkan dalam bentuk "garis"
 3. neighbors
 neighbors adalah nodes-nodes yang terhubung dengan nodes tersebut.

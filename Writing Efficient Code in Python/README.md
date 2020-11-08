@@ -72,3 +72,17 @@ from hero_funcs import get_publisher_heroes_np
 
 ## 7. Writing Better Loops
 1. Moving Calculation above loop (Mengeluarkan perintah statis yang ada di dalam looping)
+2. Using Holistic Conversion (map, unpack, list comprehention)
+
+## Theoritical Conclusion
+- using .iterrows is faster than .iloc (when iterate a dataframe)
+- Use list comprehension is faster than for loop
+- Efficient in combining object can we get by unpack zip
+- Efficient in counting object can we get by using package (from collections import Counter)
+- Efficient in combining object can we get by using package (from itertools import combinations)
+- sets if faster than list or tuple
+- Eliminating loops with built-in is faster than traditional for loops (enumerate, map, unpacked, list comprehention)
+- a numpy array provide fast and memory efficient alternatife to list
+- itertuples is faster than iterrows
+- avoid using loop if you can go without loop (example : loop in pandas can be replaced by )
+- Calculate the win percentage predictions using NumPy arrays is fastest, followed by Use a loop and .itertuples() to collect each row's predicted win percentage, and followed by Apply predict_win_perc to each row of the DataFrame

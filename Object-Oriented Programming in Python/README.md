@@ -13,16 +13,6 @@ Object-Oriented Programming
 Object = state + behaviour
 States contains attributes (variables)
 Behavioir contains method (function)
-```
-#atributes
-import numpy as np
-a = np.array([1,2,3,4])
-# shape atributes
-a.shape
-
-# reshape method
-a.reshape(2,2)
-```
 
 ### 2. Encapsulation
 Bundling data with code operating on it.
@@ -37,11 +27,104 @@ Blueprint for objects outlining possible states and behaviours.
 - Methods are functions, so anything you can do with a function, you can also do with a method.
 
 ### 5. Key Terms
-1. Method
-2. atributes
-3. arguments
+1. Method (a.k.a Function)
+    ```
+    import numpy as np
+    a = np.array([1,2,3,4])
+    # reshape is an example of method
+    a.reshape(2,2)
+    ```
+2. atributes (a.k.a parameters)
+    ```
+    import numpy as np
+    a = np.array([1,2,3,4])
+    # shape is an example of atributes
+    a.shape
+    ```
+
+3. arguments 
 4. parameters
-5. constructor
+5. Class constructor
+    ```
+    ## __init__() is an class constructor (allow create multiple atributes in a single method)
+    class Employee:
+    # Create __init__() method
+    def __init__(self, name, salary=0):
+        # Create the name and salary attributes
+        self.name = name
+        self.salary = salary
+    ```
+6. Class
+    ```
+    class Employee:
+        pass
+    ```
+7. Function
+    ```
+    def set_count(self,n):
+        self.count = n
+    ```
+
+8. Instance Atributes
+    ```
+    ## __init__(self) with only self parameters is an instance atributes
+    # Create a Player class
+    class Player:
+        MAX_POSITION = 10
+        
+        def __init__(self):
+            self.position = 0
+    ```
+9. Encapsulation
+10. Polymorphism
+11. Inheritance (warisan)
+    Inheritance is a powerful tool of object-oriented languages that allows you to customize functionality of existing classes without having to re-implement methods from scratch.
+    ```
+    # Parent      
+    class BankAccount:
+        def __init__(self,balance):
+            self.balance = balance
+        
+        def withdraw(self,amount):
+            self.balance -= amount
+    
+    # Child (Inheritance)
+    # Empty class inherited from BankAccount
+    class SavingAccount(BankAccount):
+        pass     
+    ```
+12. Object
+    ```
+    # create object from Employee Class
+    emp = Employee()
+    ```
+13. Class Instance
+    ```
+    ## 
+    class BetterDate:    
+    # Constructor
+    def __init__(self, year, month, day):
+      self.year, self.month, self.day = year, month, day
+
+    @classmethod
+    def from_str(cls, datestr):
+        parts = datestr.split("-")
+        year, month, day = int(parts[0]), int(parts[1]), int(parts[2])
+        # Return the class instance
+        return cls(year, month, day)
+    ```
+14. Decorator
+    ```
+    # @classmethod is characteristic of decorator
+    class BetterDate:
+    def __init__(self, year, month, day):
+      self.year, self.month, self.day = year, month, day
+      
+    @classmethod # decorator
+    def from_str(cls, datestr):
+        year, month, day = map(int, datestr.split("-"))
+        return cls(year, month, day)
+    ```
 
 ## Source
 1. https://drive.google.com/drive/folders/1YoZTG6ktqL1q5gEYjBOsiu-iAoJJIYKE

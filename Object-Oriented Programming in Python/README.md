@@ -100,7 +100,7 @@ Blueprint for objects outlining possible states and behaviours.
     ```
 13. Class Instance
     ```
-    ## 
+    ## cls in characteristic of Class Instance
     class BetterDate:    
     # Constructor
     def __init__(self, year, month, day):
@@ -125,6 +125,10 @@ Blueprint for objects outlining possible states and behaviours.
         year, month, day = map(int, datestr.split("-"))
         return cls(year, month, day)
     ```
+
+15. __str__() is supposed to provide a "user-friendly" output describing an object, and __repr__() should return the expression that, when evaluated, will return the same object, ensuring the reproducibility of your code.
+
+
 
 ## Source
 1. https://drive.google.com/drive/folders/1YoZTG6ktqL1q5gEYjBOsiu-iAoJJIYKE

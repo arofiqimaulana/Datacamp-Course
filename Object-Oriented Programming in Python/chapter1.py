@@ -271,7 +271,3 @@ print((pt.x, pt.y))
 pt.y = 4.0
 print(pt.distance_to_origin())
 
-
-
-
-
